@@ -11,10 +11,10 @@ team_size = 6
 
 #Creates the actual bot that connects to discord
 def setup(bot):
-    bot.add_cog(Teammaker(bot))
+    bot.add_cog(ROPCS(bot))
 
 
-class Teammaker:
+class ROPCS:
     def __init__(self, bot):
         self.bot = bot
         self.queue = PlayerQueue()
