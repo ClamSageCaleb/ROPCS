@@ -12,12 +12,15 @@ logger.addHandler(logging.StreamHandler())
 
 extensions = ["cogs.teammaker"]
 
-norm = """
-  _   _    ___    ____    __  __ 
- | \ | |  / _ \  |  _ \  |  \/  |
- |  \| | | | | | | |_) | | |\/| |
- | |\  | | |_| | |  _ <  | |  | |
- |_| \_|  \___/  |_| \_\ |_|  |_|
+online = """
+______         _     _____         _  _              
+| ___ \       | |   |  _  |       | |(_)             
+| |_/ /  ___  | |_  | | | | _ __  | | _  _ __    ___ 
+| ___ \ / _ \ | __| | | | || '_ \ | || || '_ \  / _ \
+| |_/ /| (_) || |_  \ \_/ /| | | || || || | | ||  __/
+\____/  \___/  \__|  \___/ |_| |_||_||_||_| |_| \___|
+                                                     
+                                                     
                                  
 """
 
@@ -30,7 +33,7 @@ class Bot(commands.Bot):
         loaded_extensions, failed_extensions = await self.load_extensions()
         logger.info("LOADED: {}".format(loaded_extensions))
         logger.info("FAILED: {}".format(failed_extensions))
-        print(norm)
+        print(online)
 
     async def load_extensions(self):
         loaded_extensions = []
