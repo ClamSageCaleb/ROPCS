@@ -10,19 +10,9 @@ logger = logging.getLogger("discord")
 logger.setLevel(logging.INFO)
 logger.addHandler(logging.StreamHandler())
 
-extensions = ["cogs.teammaker"]
+extensions = ["cogs.ropcs"]
 
-online = """
-______         _     _____         _  _              
-| ___ \       | |   |  _  |       | |(_)             
-| |_/ /  ___  | |_  | | | | _ __  | | _  _ __    ___ 
-| ___ \ / _ \ | __| | | | || '_ \ | || || '_ \  / _ \
-| |_/ /| (_) || |_  \ \_/ /| | | || || || | | ||  __/
-\____/  \___/  \__|  \___/ |_| |_||_||_||_| |_| \___|
-                                                     
-                                                     
-                                 
-"""
+online = "Bot Online :-)"
 
 class Bot(commands.Bot):
     def __init__(self, config, *args, **kwargs):
