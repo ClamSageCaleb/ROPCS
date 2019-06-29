@@ -17,7 +17,7 @@
 
 ## Installation
 
-1. Clone the repository (```git clone https://github.com/clamsagecaleb/Random-R6S-LoL-Character-Selector.git```)
+1. Clone the repository (```git clone https://github.com/clamsagecaleb/ROPCS.git```)
 2. Install requirements (```pip3 install -r requirements.txt```)
 3. Enter your bot's token in ROPCS/config/config.ini (<a href="https://discordapp.com/developers/applications/me">Create bot here</a>)
 4. Run ROPCS/bot.py
