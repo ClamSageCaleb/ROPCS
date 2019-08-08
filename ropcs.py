@@ -25,12 +25,11 @@ async def on_message(message):
         msg.add_field(name="Bitcoin", value="Current value of Bitcoin. To use do !bitcoin", inline=False)
         await client.send_message(message.channel, embed=msg)
 
+        await client.process_commands(message)
 
-@client.command(name='8ball',
-                description="Answers a yes/no question.",
-                brief="Answers from the beyond.",
-                aliases=['eight_ball', 'eightball', '8-ball'],
-                pass_context=True)
+
+@client.command(name='8ball', description="Answers a yes/no question.", brief="Answers from the beyond.",
+                aliases=['eight_ball', 'eightball', '8-ball'], pass_context=True)
 async def eight_ball(context):
     possible_responses = [
         'That is a resounding no',
