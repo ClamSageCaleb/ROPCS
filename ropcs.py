@@ -19,20 +19,13 @@ async def on_message(message):
         return
 
     if message.content.startswith('!help'):
-        msg = discord.Embed(title='Scrub Bot', description="Written by Clam", color=0x0000ff)
-        msg.add_field(name="Eight Ball", value="Answers a yes/no question. To use do !8ball", inline=False)
+        msg = discord.Embed(title='Scrub Bot', description="A bot with no purpose (yet)", color=0x0000ff)
+        msg.add_field(name="***Commands:***", value=" ")
+        msg.add_field(name="Eight Ball", value="Answers a yes/no question. To use do !8ball", inline=True)
         msg.add_field(name="Square", value="Squares a number. To use do !square", inline=False)
         msg.add_field(name="Bitcoin", value="Current value of Bitcoin. To use do !bitcoin", inline=False)
-        embed = discord.Embed(title="ROPCS",
-                             color=discord.Colour(0xb110f4),
-                             description="A Bot that has no purpose yet, coming soon.")
-        embed.set_footer(text="Developed by Clam")
-        embed.add_field(name="***Commands:***", value="")
-        embed.add_field(name="Eight Ball", value="Answers a yes/no question. To use do !8ball", inline=True)
-        embed.add_field(name="Square", value="Squares a number. To use do !square")
-        embed.add_field(name="Bitcoin", value="Current value of Bitcoin. To use do !bitcoin")
-
-        await client.send_message(message.channel, embed=embed)
+        msg.set_footer(text="Developed by Clam")
+        await client.send_message(message.channel, embed=msg)
     await client.process_commands(message)
 
 
