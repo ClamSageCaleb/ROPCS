@@ -24,8 +24,9 @@ async def on_message(message):
         msg.add_field(name="Square", value="Squares a number. To use do !square", inline=False)
         msg.add_field(name="Bitcoin", value="Current value of Bitcoin. To use do !bitcoin", inline=False)
         await client.send_message(message.channel, embed=msg)
+    await client.process_commands(message)
 
-        await client.process_commands(message)
+
 
 
 @client.command(name='8ball', description="Answers a yes/no question.", brief="Answers from the beyond.",
