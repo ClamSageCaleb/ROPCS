@@ -1,6 +1,6 @@
 <h1 align="center">
   <br>
-    <img src="https://github.com/ClamSageCaleb/Random-R6S-LoL-Character-Selector/blob/master/ROPCS/icon.svg" alt="Character Selector" width="200">
+    <img src="https://github.com/ClamSageCaleb/ROPCS/blob/master/icon.svg" alt="Character Selector" width="200">
   <br>
     Random OP/CHAMP Selector
   <br>
@@ -19,8 +19,7 @@
 
 1. Clone the repository (```git clone https://github.com/clamsagecaleb/ROPCS.git```)
 2. Install requirements (```pip3 install -r requirements.txt```)
-3. Enter your bot's token in ROPCS/config/config.ini (<a href="https://discordapp.com/developers/applications/me">Create bot here</a>)
-4. Run ROPCS/bot.py
+3. Run ROPCS/bot.py
 
 ## Usage
 
