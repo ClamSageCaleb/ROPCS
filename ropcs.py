@@ -11,7 +11,7 @@ BOT_PREFIX = ("!")
 TOKEN = "NTg4NDM0NjAzNjM1OTAwNDI2.XUunhg.xyN0xKhOnRlnF0jba6p-knsL50o"
 
 client = Bot(command_prefix=BOT_PREFIX)
-
+client.remove_command('help')
 
 @client.event
 async def on_message(message):
