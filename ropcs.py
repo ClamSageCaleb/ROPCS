@@ -28,7 +28,7 @@ async def on_message(message):
                              description="A Bot that has no purpose yet, coming soon.")
         embed.set_thumbnail(url="https://themerkle.com/wp-content/uploads/2017/05/kingdice-pr.jpg")
         embed.set_footer(text="Developed by Clam")
-        embed.add_field(name="***Commands:***")
+        embed.add_field(name="***Commands:***", value="")
         embed.add_field(name="Eight Ball", value="Answers a yes/no question. To use do !8ball", inline=True)
         embed.add_field(name="Square", value="Squares a number. To use do !square")
         embed.add_field(name="Bitcoin", value="Current value of Bitcoin. To use do !bitcoin")
