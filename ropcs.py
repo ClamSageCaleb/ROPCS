@@ -23,6 +23,7 @@ async def on_message(message):
         msg.add_field(name="Eight Ball", value="Answers a yes/no question. To use do !8ball", inline=True)
         msg.add_field(name="Square", value="Squares a number. To use do !square", inline=False)
         msg.add_field(name="Bitcoin", value="Current value of Bitcoin. To use do !bitcoin", inline=False)
+        msg.set_thumbnail(url="https://themerkle.com/wp-content/uploads/2017/05/kingdice-pr.jpg")
         msg.set_footer(text="Developed by Clam")
         await client.send_message(message.channel, embed=msg)
     await client.process_commands(message)
