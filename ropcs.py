@@ -20,8 +20,7 @@ async def on_message(message):
 
     if message.content.startswith('!help'):
         msg = discord.Embed(title='Scrub Bot', description="A bot with no purpose (yet)", color=0x0000ff)
-        msg.add_field(name="Commands:", value=" ")
-        msg.add_field(name="Eight Ball", value="Answers a yes/no question. To use do !8ball", inline=False)
+        msg.add_field(name="Eight Ball", value="Answers a yes/no question. To use do !8ball", inline=True)
         msg.add_field(name="Square", value="Squares a number. To use do !square", inline=False)
         msg.add_field(name="Bitcoin", value="Current value of Bitcoin. To use do !bitcoin", inline=False)
         msg.set_footer(text="Developed by Clam")
