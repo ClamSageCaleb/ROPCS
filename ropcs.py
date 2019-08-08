@@ -11,6 +11,20 @@ TOKEN = "NTg4NDM0NjAzNjM1OTAwNDI2.XUunhg.xyN0xKhOnRlnF0jba6p-knsL50o"
 
 client = Bot(command_prefix=BOT_PREFIX)
 
+
+@client.event
+async def on_message(message):
+    if message.author == client.user:
+        return
+
+    if message.content.startswith('!help'):
+        msg = discord.Embed(title='Scrub Bot', description="Written by Clam", color=0x0000ff)
+        msg.add.field(name="Eight Ball", value="Answers a yes/no question. To use do !eightball", inline=False)
+        msg.add.field(name="Square", value="Squares a number. To use do !square", inline=False)
+        msg.add.field(name="Bitcoin", value="Current value of Bitcoin. To use do !bitcoin", inline=False)
+        await client.send_message(message.channel, embed=msg)
+
+
 @client.command(name='8ball',
                 description="Answers a yes/no question.",
                 brief="Answers from the beyond.",
