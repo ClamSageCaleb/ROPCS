@@ -26,7 +26,6 @@ async def on_message(message):
         embed = discord.Embed(title="ROPCS",
                              color=discord.Colour(0xb110f4),
                              description="A Bot that has no purpose yet, coming soon.")
-        embed.set_thumbnail(url="https://themerkle.com/wp-content/uploads/2017/05/kingdice-pr.jpg")
         embed.set_footer(text="Developed by Clam")
         embed.add_field(name="***Commands:***", value="")
         embed.add_field(name="Eight Ball", value="Answers a yes/no question. To use do !8ball", inline=True)
