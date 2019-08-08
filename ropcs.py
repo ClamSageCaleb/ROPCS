@@ -13,6 +13,7 @@ TOKEN = "NTg4NDM0NjAzNjM1OTAwNDI2.XUunhg.xyN0xKhOnRlnF0jba6p-knsL50o"
 client = Bot(command_prefix=BOT_PREFIX)
 client.remove_command('help')
 
+
 @client.event
 async def on_message(message):
     if message.author == client.user:
@@ -29,10 +30,7 @@ async def on_message(message):
     await client.process_commands(message)
 
 
-
-
-@client.command(name='8ball', description="Answers a yes/no question.", brief="Answers from the beyond.",
-                aliases=['eight_ball', 'eightball', '8-ball'], pass_context=True)
+@client.command(name='8ball', aliases=['eight_ball', 'eightball', '8-ball'], pass_context=True)
 async def eight_ball(context):
     possible_responses = [
         'That is a resounding no',
