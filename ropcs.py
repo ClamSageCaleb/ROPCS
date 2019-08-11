@@ -104,6 +104,17 @@ async def bothroleandchamp(ctx):
         champs) + "\n Your Role is: " + random.choice(roles))
 
 
+#TODO: Add functioanlity for this command
+#@client.command(aliases=['km'], pass_context=True)
+#async def killme(ctx):
+    #Output:
+    #>!km
+    #Champ: [champ]
+    #Role: [role]
+    #Keystone: [keystone]
+    #Items: [item1] [item2]
+
+
 @client.command()
 async def ggez(name):
     msg = '''░░░░░░░░░░░░░░░░░░░░░░░░░
