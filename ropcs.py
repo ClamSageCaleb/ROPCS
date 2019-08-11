@@ -35,6 +35,8 @@ async def on_message(message):
                       inline=False)
         msg.add_field(name="Square", value="Squares a number. \n **Usage**: !square [number]", inline=False)
         msg.add_field(name="Bitcoin", value="Current value of Bitcoin. \n **Usage**: !bitcoin", inline=False)
+        msg.add_field(name="Random Champ", value="Selects a random LoL Champion. \n **Usage: !rc", inline=False)
+        msg.add_field(name="Random Role", value="Selects a random LoL Role. \n **Usage: !rr", inline=False)
         msg.add_field(name="GG EZ", value="Just use it \n **Usage**: !ggez @[user]", inline=False)
         msg.set_thumbnail(url="https://themerkle.com/wp-content/uploads/2017/05/kingdice-pr.jpg")
         msg.set_footer(text="Developed by Clam")
