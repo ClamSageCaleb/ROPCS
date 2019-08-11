@@ -85,7 +85,7 @@ async def randomchamp(ctx):
 
 @client.command(aliases=['rr', 'rrole'], pass_context=True)
 async def randomrole(ctx):
-    await client.say("{0.mention}, Your Role is: ".format(ctx.message.author) + random.choice(champs))
+    await client.say("{0.mention}, Your Role is: ".format(ctx.message.author) + random.choice(roles))
 
 
 @client.command()
