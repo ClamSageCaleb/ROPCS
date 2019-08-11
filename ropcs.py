@@ -76,16 +76,14 @@ async def bitcoin():
         await client.say("Bitcoin price is: $" + response['bpi']['USD']['rate'])
 
 
-@client.command(aliases = ['rc', 'rchamp'], pass_context=True)
+@client.command(aliases=['rc', 'rchamp'], pass_context=True)
 async def randomchamp(ctx):
     await client.say("{0.mention}, Your Champ is: ".format(ctx.message.author) + random.choice(champs))
 
 
-@client.command(name='randomRole', aliases=['rr'])
-async def randomRole(message):
-    if message.content.startswith('!rr'):
-        msg = '{0.author.mention}'.format(message)
-        await client.say("Your Role is: " + random.choice(champSelect.values()) + " ," + msg)
+@client.command(aliases=['rr', 'rrole'], pass_context=True)
+async def randomrole(ctx):
+    await client.say("{0.mention}, Your Role is: ".format(ctx.message.author) + random.choice(champs))
 
 
 @client.command()
