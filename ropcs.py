@@ -21,7 +21,8 @@ with open(txt) as f:
         s = line.strip().split(' ')
         champs.append(s[0])
         roles.append(s[1])
-
+champSelect = dict(zip(champs, roles))
+print(champSelect[1])
 
 @client.event
 async def on_message(message):
