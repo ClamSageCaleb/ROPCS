@@ -17,7 +17,7 @@ champs = []
 roles = []
 with open('champions.txt', 'r') as f:
     for line in f:
-        name, role = line.strip().split()
+        name, role = line.split(' ')
         champs.append(name)
         roles.append(role)
 
