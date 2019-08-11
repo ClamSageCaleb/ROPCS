@@ -72,7 +72,7 @@ async def ggez(name):
 ░░░█░▀█░█░▀█░░█▀▀░▄▀░░░░░
 ░░░▀▀▀▀░▀▀▀▀░░▀▀▀░▀▀▀░░░░
 ░░░░░░░░░░░░░░░░░░░░░░░░░'''
-    await client.say(msg + \n name)
+    await client.say(msg + "\n" + name)
 
 
 async def list_servers():
