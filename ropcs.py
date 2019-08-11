@@ -21,7 +21,6 @@ with open(txt) as f:
         s = line.strip().split(' ')
         champs.append(s[0])
         roles.append(s[1])
-print(champs[0], roles[0])
 
 
 @client.event

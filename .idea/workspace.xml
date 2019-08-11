@@ -13,8 +13,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ropcs.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="22" column="26" lean-forward="true" selection-start-line="22" selection-start-column="26" selection-end-line="22" selection-end-column="26" />
+            <state relative-caret-position="510">
+              <caret line="30" column="35" lean-forward="true" selection-start-line="30" selection-start-column="35" selection-end-line="30" selection-end-column="35" />
               <folding>
                 <element signature="e#23#36#0" expanded="true" />
               </folding>
@@ -43,8 +43,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="918" />
-    <option name="y" value="37" />
+    <option name="x" value="77" />
+    <option name="y" value="161" />
     <option name="width" value="1400" />
     <option name="height" value="1035" />
   </component>
@@ -126,8 +126,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="918" y="37" width="1400" height="1035" extended-state="0" />
-    <editor active="true" />
+    <frame x="77" y="161" width="1400" height="1035" extended-state="0" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2496329" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -186,8 +185,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ropcs.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="26" lean-forward="true" selection-start-line="22" selection-start-column="26" selection-end-line="22" selection-end-column="26" />
+        <state relative-caret-position="510">
+          <caret line="30" column="35" lean-forward="true" selection-start-line="30" selection-start-column="35" selection-end-line="30" selection-end-column="35" />
           <folding>
             <element signature="e#23#36#0" expanded="true" />
           </folding>
