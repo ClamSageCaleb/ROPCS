@@ -78,7 +78,7 @@ async def bitcoin():
 
 @client.event
 async def randomChamp(message):
-    if message.content.startswith('!rc'):
+    if message.content.startswith('!randomChamp'):
         msg = '{0.author.mention}'.format(message)
         await client.say("Your Champ is: " + random.choice(champSelect.keys()) + " ," + msg)
     await client.process_commands(message)
