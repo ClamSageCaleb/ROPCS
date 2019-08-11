@@ -22,7 +22,7 @@ with open(txt) as f:
         champs.append(s[0])
         roles.append(s[1])
 champSelect = dict(zip(champs, roles))
-print(champSelect[1])
+print(champSelect)
 
 @client.event
 async def on_message(message):
