@@ -76,11 +76,12 @@ async def bitcoin():
         await client.say("Bitcoin price is: $" + response['bpi']['USD']['rate'])
 
 
-@client.command(name='randomChamp', aliases=['rc'])
+@client.event(name='randomChamp', aliases=['rc'])
 async def randomChamp(message):
     if message.content.startswith('!rc'):
         msg = '{0.author.mention}'.format(message)
         await client.say("Your Champ is: " + random.choice(champSelect.keys()) + " ," + msg)
+    await client.process_commands(message)
 
 
 @client.command(name='randomRole', aliases=['rr'])
