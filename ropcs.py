@@ -1,4 +1,12 @@
-# Work with Python 3.6
+__author__ = "Caleb Smith"
+__copyright__ = "Copyright 2019, MIT License"
+__credits__ = "Caleb Smith"
+__license__ = "MIT"
+__version__ = "0.0.2"
+__maintainer__ = "Caleb Smith"
+__email__ = "caleb.benjamin9799@gmail.com"
+__status__ = "Production"
+
 import random
 import asyncio
 import aiohttp
