@@ -13,14 +13,14 @@ TOKEN = "NTg4NDM0NjAzNjM1OTAwNDI2.XUunhg.xyN0xKhOnRlnF0jba6p-knsL50o"
 client = Bot(command_prefix=BOT_PREFIX)
 client.remove_command('help')
 
+txt = 'champions.txt'
 champs = []
 roles = []
-with open('champions.txt', 'r') as f:
+with open(txt) as f:
     for line in f:
-        name, role = line.split(' ')
-        champs.append(name)
-        roles.append(role)
-
+        n, r = line.strip().split(' ')
+        champs.append(n)
+        roles.append(r)
 print(champs[0], roles[0])
 
 
