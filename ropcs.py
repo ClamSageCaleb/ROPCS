@@ -18,9 +18,9 @@ champs = []
 roles = []
 with open(txt) as f:
     for line in f:
-        n, r = line.strip().split(' ')
-        champs.append(n)
-        roles.append(r)
+        s = line.strip().split(' ')
+        champs.append(s[0])
+        roles.append(s[1])
 print(champs[0], roles[0])
 
 
