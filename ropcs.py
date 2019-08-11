@@ -15,9 +15,9 @@ client.remove_command('help')
 
 champs = []
 roles = []
-with open('champions.txt', 'rt') as f:
+with open('champions.txt', 'r') as f:
     for line in f:
-        name, role = line.strip().split(" ")
+        name, role = line.strip().split(' ')
         champs.append(name)
         roles.append(role)
 
