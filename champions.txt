@@ -46,7 +46,7 @@ Jax Jungle
 Jayce Top
 Jhin ADC
 Jinx ADC
-Kai’Sa ADC
+KaiSa ADC
 Kalista ADC
 Karma Support
 Karthus Mid
@@ -60,7 +60,7 @@ Kindred Jungle
 Kled Top
 Kog ADC
 LeBlanc Mid
-Lee Sin Jungle
+LeeSin Jungle
 Leona Support
 Lissandra Mid
 Lucian ADC
@@ -109,7 +109,7 @@ Soraka Support
 Swain Mid
 Sylas Mid
 Syndra Mid
-Tahm Kench Support
+Tahm Support
 Taliyah Mid
 Talon Mid
 Taric Support
@@ -134,7 +134,7 @@ Warwick Jungle
 Wukong Top
 Xayah ADC
 Xerath Mid
-Xin Zhao Jungle
+XinZhao Jungle
 Yasuo Mid
 Yorick Top
 Yuumi Support
