@@ -14,6 +14,23 @@ client = Bot(command_prefix=BOT_PREFIX)
 client.remove_command('help')
 
 
+class Champion:
+    def __init__(self, name, role):
+        self.name = name
+        self.role = role
+
+
+champs = []
+roles = []
+with open('champions.txt', 'rt') as f:
+    for name_role in f:
+        name, role = name_role.strip().split("\t")
+        champs.append(name)
+        roles.append(role)
+
+print(champs[0], roles[0])
+
+
 @client.event
 async def on_message(message):
     if message.author == client.user:
@@ -21,7 +38,8 @@ async def on_message(message):
 
     if message.content.startswith('!help'):
         msg = discord.Embed(title='Scrub Bot', description="A bot with no purpose (yet)", color=0x0000ff)
-        msg.add_field(name="Eight Ball", value="Answers a yes/no question. \n **Usage**: !8ball [question]", inline=False)
+        msg.add_field(name="Eight Ball", value="Answers a yes/no question. \n **Usage**: !8ball [question]",
+                      inline=False)
         msg.add_field(name="Square", value="Squares a number. \n **Usage**: !square [number]", inline=False)
         msg.add_field(name="Bitcoin", value="Current value of Bitcoin. \n **Usage**: !bitcoin", inline=False)
         msg.add_field(name="GG EZ", value="Just use it \n **Usage**: !ggez @[user]", inline=False)
