@@ -37,6 +37,7 @@ async def on_message(message):
         msg.add_field(name="Bitcoin", value="Current value of Bitcoin. \n Usage: !bitcoin", inline=False)
         msg.add_field(name="Random Champ", value="Selects a random LoL Champion. \n Usage: !rc", inline=False)
         msg.add_field(name="Random Role", value="Selects a random LoL Role. \n Usage: !rr", inline=False)
+        msg.add_field(name="Combo Role/Champ", value="Selects a random LoL Role and Champion. \n Usage: !rac", inline=False)
         msg.add_field(name="GG EZ", value="Just use it \n Usage: !ggez @[user]", inline=False)
         msg.set_thumbnail(url="https://themerkle.com/wp-content/uploads/2017/05/kingdice-pr.jpg")
         msg.set_footer(text="Developed by Clam")
@@ -86,6 +87,10 @@ async def randomchamp(ctx):
 @client.command(aliases=['rr', 'rrole'], pass_context=True)
 async def randomrole(ctx):
     await client.say("{0.mention}, Your Role is: ".format(ctx.message.author) + random.choice(roles))
+
+@client.command(aliases=['rac', 'rolechamp'], pass_context=True)
+async def bothroleandchamp(ctx):
+    await client.say("{0.mention}, Your Champ is: ".format(ctx.message.author) + random.choice(champs) + "\n Your Role is: " + random.choice(roles))
 
 
 @client.command()
