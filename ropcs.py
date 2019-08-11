@@ -77,15 +77,17 @@ async def bitcoin():
 
 
 @client.command(name='randomChamp', aliases=['rc'])
-async def randomChamp(ctx):
-    if ctx.content.startswith('!rc'):
-        await client.say("Your Champ is: " + random.choice(champSelect.keys()) + " ," + ctx.message.author.mention)
+async def randomChamp(message):
+    if message.content.startswith('!rc'):
+        msg = '{0.author.mention}'.format(message)
+        await client.say("Your Champ is: " + random.choice(champSelect.keys()) + " ," + msg)
 
 
 @client.command(name='randomRole', aliases=['rr'])
-async def randomRole(ctx):
-    if ctx.content.startswith('!rr'):
-        await client.say("Your Role is: " + random.choice(champSelect.values()) + " ," + ctx.message.author.mention)
+async def randomRole(message):
+    if message.content.startswith('!rr'):
+        msg = '{0.author.mention}'.format(message)
+        await client.say("Your Role is: " + random.choice(champSelect.values()) + " ," + msg)
 
 
 @client.command()
