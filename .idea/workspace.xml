@@ -14,7 +14,7 @@
         <entry file="file://$PROJECT_DIR$/ropcs.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="323">
-              <caret line="19" column="31" selection-start-line="19" selection-start-column="31" selection-end-line="19" selection-end-column="31" />
+              <caret line="19" column="25" selection-start-line="19" selection-start-column="25" selection-end-line="19" selection-end-column="25" />
               <folding>
                 <element signature="e#23#36#0" expanded="true" />
               </folding>
@@ -43,8 +43,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="943" />
-    <option name="y" value="40" />
+    <option name="x" value="836" />
+    <option name="y" value="15" />
     <option name="width" value="1400" />
     <option name="height" value="1035" />
   </component>
@@ -126,7 +126,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="943" y="40" width="1400" height="1035" extended-state="0" />
+    <frame x="836" y="15" width="1400" height="1035" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2496329" />
@@ -187,7 +187,7 @@
     <entry file="file://$PROJECT_DIR$/ropcs.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
-          <caret line="19" column="31" selection-start-line="19" selection-start-column="31" selection-end-line="19" selection-end-column="31" />
+          <caret line="19" column="25" selection-start-line="19" selection-start-column="25" selection-end-line="19" selection-end-column="25" />
           <folding>
             <element signature="e#23#36#0" expanded="true" />
           </folding>
