@@ -78,7 +78,7 @@ async def bitcoin():
 
 @client.command(aliases = ['rc', 'rchamp'], pass_context=True)
 async def randomchamp(ctx):
-    await client.say("{0.mention}, Your Champ is: ".format(ctx.message.author) + random.choice(champs)
+    await client.say("{0.mention}, Your Champ is: ".format(ctx.message.author) + random.choice(champs))
 
 
 @client.command(name='randomRole', aliases=['rr'])
