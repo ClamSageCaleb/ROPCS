@@ -13,18 +13,11 @@ TOKEN = "NTg4NDM0NjAzNjM1OTAwNDI2.XUunhg.xyN0xKhOnRlnF0jba6p-knsL50o"
 client = Bot(command_prefix=BOT_PREFIX)
 client.remove_command('help')
 
-
-class Champion:
-    def __init__(self, name, role):
-        self.name = name
-        self.role = role
-
-
 champs = []
 roles = []
 with open('champions.txt', 'rt') as f:
-    for name_role in f:
-        name, role = name_role.strip().split(" ")
+    for name, role in f:
+        name, role = name, role.strip().split(" ")
         champs.append(name)
         roles.append(role)
 
