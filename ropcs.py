@@ -21,10 +21,10 @@ async def on_message(message):
 
     if message.content.startswith('!help'):
         msg = discord.Embed(title='Scrub Bot', description="A bot with no purpose (yet)", color=0x0000ff)
-        msg.add_field(name="Eight Ball", value="Answers a yes/no question. To use do !8ball", inline=False)
-        msg.add_field(name="Square", value="Squares a number. To use do !square", inline=False)
-        msg.add_field(name="Bitcoin", value="Current value of Bitcoin. To use do !bitcoin", inline=False)
-        msg.add_field(name="GG EZ", value="Just use it \n Usage: !ggez @user", inline=False)
+        msg.add_field(name="Eight Ball", value="Answers a yes/no question. \n __Usage__: !8ball [question]", inline=False)
+        msg.add_field(name="Square", value="Squares a number. \n __Usage__: !square [number]", inline=False)
+        msg.add_field(name="Bitcoin", value="Current value of Bitcoin. \n __Usage__: !bitcoin", inline=False)
+        msg.add_field(name="GG EZ", value="Just use it \n __Usage__: !ggez @[user]", inline=False)
         msg.set_thumbnail(url="https://themerkle.com/wp-content/uploads/2017/05/kingdice-pr.jpg")
         msg.set_footer(text="Developed by Clam")
         await client.send_message(message.channel, embed=msg)
