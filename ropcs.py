@@ -22,7 +22,7 @@ with open(txt) as f:
         champs.append(s[0])
         roles.append(s[1])
 champSelect = dict(zip(champs, roles))
-print(champSelect)
+
 
 @client.event
 async def on_message(message):
@@ -74,6 +74,16 @@ async def bitcoin():
         response = await raw_response.text()
         response = json.loads(response)
         await client.say("Bitcoin price is: $" + response['bpi']['USD']['rate'])
+
+
+@client.command(name='randomChamp', aliases='randomChamp', 'rc')
+async def randomChamp(ctx):
+    await client.say("Your Champ is: " + random.choice(champSelect.keys()) + " ," + ctx.message.author.mention)
+
+
+@client.command(name='randomRole', aliases='randomRole', 'rr')
+async def randomRole(ctx):
+    await client.say("Your Role is: " + random.choice(champSelect.values()) + " ," + ctx.message.author.mention)
 
 
 @client.command()
