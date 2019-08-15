@@ -161,7 +161,7 @@ async def killme(ctx):
     #  will be a jungle item.
     await client.say("{0.mention}, \n Your Champ is: ".format(ctx.message.author) + random.choice(
         champs) + "\n Your Role is: " + random.choice(roles) + "\n Your keystone is: " + random.choice(
-        ks) + "\n Your two items are: " + random.choice(items) + ", " + random.choice(items))
+        ks) + "\n Your two items are: \n" + random.choice(items) + "\n" + random.choice(items))
 
 
 @client.command()
