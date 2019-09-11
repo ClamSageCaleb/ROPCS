@@ -176,7 +176,7 @@ async def ggez(name):
     await client.say(msg + "\n" + name)
 
 @client.command(aliases=['mc'])
-async def minecraft(ctx):
+async def minecraft():
     msg = discord.Embed(title='__**Minecraft Server**__', description="", color=0x0000ff)
     msg.add_field(name="IP", value="71.68.104.177:6969",
                   inline=False)
