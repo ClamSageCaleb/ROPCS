@@ -180,7 +180,7 @@ async def minecraft(ctx):
     msg = discord.Embed(title='__**Minecraft Server**__', description="", color=0x0000ff)
     msg.add_field(name="IP", value="71.68.104.177:6969",
                   inline=False)
-    await client.send_message(ctx.message.channel, embed=msg)
+    await client.say(embed=msg)
 
 
 async def list_servers():
