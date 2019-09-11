@@ -68,6 +68,8 @@ async def on_message(message):
                       inline=False)
         msg.add_field(name="Kill me", value="Selects a random LoL Champ, Role, Keystone, and two items. \n Usage: !km",
                       inline=False)
+        msg.add_field(name="Minecraft", value="Prints out MC IP address. \n Usage: !mc",
+                      inline=False)
         msg.add_field(name="GG EZ", value="Just use it \n Usage: !ggez @[user]", inline=False)
         msg.set_thumbnail(url="https://themerkle.com/wp-content/uploads/2017/05/kingdice-pr.jpg")
         msg.set_footer(text="Developed by Clam")
@@ -172,6 +174,13 @@ async def ggez(name):
 ░░░▀▀▀▀░▀▀▀▀░░▀▀▀░▀▀▀░░░░
 ░░░░░░░░░░░░░░░░░░░░░░░░░'''
     await client.say(msg + "\n" + name)
+
+@client.command(aliases=['mc'])
+async def minecraft(ctx):
+    msg = discord.Embed(title='__**Minecraft Server**__', description="", color=0x0000ff)
+    msg.add_field(name="IP", value="71.68.104.177:6969",
+                  inline=False)
+    await client.send_message(ctx.channel, embed=msg)
 
 
 async def list_servers():
