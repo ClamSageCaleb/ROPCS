@@ -149,10 +149,49 @@ async def killme(ctx):
 
 @client.command(aliases=['opt'], pass_context=True)
 async def options(ctx):
+    midList = []
+    topList = []
+    botList = []
+    suppList = []
+    jgList = []
     await ctx.send("Here, have a look at the options! \n" + ctx.message.author.mention + "\n")
-    for keys,values in champSelect.items():
-        await ctx.send(keys)
-        await ctx.send(values)
+    for key in champSelect:
+        if champSelect[key] == 'Mid':
+            midList.append(key)
+    midStr = ', '.join(midList)
+   
+    
+    for key in champSelect:
+        if champSelect[key] == 'Top':
+            topList.append(key)
+    topStr = ', '.join(topList)
+    
+   
+    for key in champSelect:
+        if champSelect[key] == 'ADC':
+            botList.append(key)
+    botStr = ', '.join(botList)
+    
+   
+    for key in champSelect:
+        if champSelect[key] == 'Support':
+            suppList.append(key)
+    suppStr = ', '.join(suppList)
+   
+    for key in champSelect:
+        if champSelect[key] == 'Jungle':
+            jgList.append(key)
+    jgStr = ', '.join(jgList)
+
+    msg = discord.Embed(title='__**Champions & Roles**__', description="", color=0x0000ff)
+    msg.add_field(name="Top", value= topStr, inline=False)
+    msg.add_field(name="Jungle", value=jgStr, inline=False)
+    msg.add_field(name="Mid", value= midStr, inline=False)
+    msg.add_field(name="ADC", value= botStr, inline=False)
+    msg.add_field(name="Support", value=suppStr, inline=False)
+    msg.set_thumbnail(url="https://themerkle.com/wp-content/uploads/2017/05/kingdice-pr.jpg")
+    msg.set_footer(text="Developed by Clam")
+    await ctx.channel.send(embed=msg)
 
 
 @client.command()
