@@ -147,6 +147,13 @@ async def killme(ctx):
         champs) + "\n Your Role is: " + random.choice(roles) + "\n Your keystone is: " + random.choice(
         ks) + "\n Your two items are: \n" + random.choice(items) + random.choice(items))
 
+@client.command(aliases=['opt'], pass_context=True)
+async def options(ctx):
+    await ctx.send("Here, have a look at the options! \n" + ctx.message.author.mention + "\n")
+    for keys,values in champSelect.items():
+        await ctx.send(keys)
+        await ctx.send(values)
+
 
 @client.command()
 async def ggez(ctx, name):
