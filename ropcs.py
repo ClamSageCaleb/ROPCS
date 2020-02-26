@@ -74,6 +74,7 @@ async def on_message(ctx):
         msg.add_field(name="Kill me", value="Selects a random LoL Champ, Role, Keystone, and two items. \n Usage: !km",
                       inline=False)
         msg.add_field(name="GG EZ", value="Just use it \n Usage: !ggez [user]", inline=False)
+        msg.add_field(name="Note", value="Development Information. \n Usage: !info")
         msg.set_thumbnail(url="http://scrubhubkc.com/wp-content/uploads/2014/05/logo_large.png")
         msg.set_footer(text="Developed by Clam")
         await ctx.channel.send(embed=msg)
@@ -83,6 +84,20 @@ async def on_message(ctx):
 async def on_ready():
     await client.change_presence(status=discord.Status.dnd, activity=game)
     print("Logged in as " + client.user.name)
+
+# Lists all of the application info
+@client.command()
+async def info(ctx):
+    msg = discord.Embed(title='__**Scrub Bot**__', description="", color=0x0000ff)
+    msg.add_field(name="Contributors", value=__author__, inline=False)
+    msg.add_field(name="Copyright", value=__copyright__, inline=False)
+    msg.add_field(name="License", value=__license__, inline=False)
+    msg.add_field(name="Version", value=__version__, inline=False)
+    msg.add_field(name="Maintainer", value=__maintainer__, inline=False)
+    msg.add_field(name="Email", value= __email__, inline=False)
+    msg.add_field(name="Status", value= __status__, inline=False)
+    msg.set_thumbnail(url="https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/f0/f0936f1b28b2b9ad67c52ef775a52284cf93a950_full.jpg")
+    await ctx.send(embed=msg)
 
 
 # randomchamp command takes input !rc and replies with a random champion
@@ -278,7 +293,12 @@ async def stat(ctx, champName):
     :return: Returns the link to OP.GG for given champion
     """
     link = "https://op.gg/champion/" + champName
-    await ctx.send("Here's the stats! \n" + link)
+    champName = champName.title()
+    msg = discord.Embed(title='__**' + champName +  ' Build**__', description="", color=0x0000ff, url=link)
+    msg.add_field(name=champName + " build", value= "This will increase win chance by 100%", inline=False)
+    msg.set_thumbnail(url="https://opgg-static.akamaized.net/images/lol/champion/" + champName + "?image=q_auto,w_140&v=1581511032")
+    msg.set_footer(text="Developed by Clam")
+    await ctx.channel.send(embed=msg)
 
 # Takes the user argument of name and creates a url for OP.GG based on player
 @client.command(aliases=['pl'], pass_context=True)
@@ -289,7 +309,10 @@ async def summoner(ctx, name):
     :return: Returns the link to OP.GG for given player
     """
     link = "https://op.gg/summoner/userName=" + name
-    await ctx.send("Here's the stats! \n" + link)
+    msg = discord.Embed(title='__**' + name +  ' Stats**__', description="", color=0x0000ff, url=link)
+    msg.add_field(name=name + " stats", value= "Flame their Win/Rate", inline=False)
+    msg.set_footer(text="Developed by Clam")
+    await ctx.channel.send(embed=msg)
 
 @client.command()
 async def ggez(ctx, name):
