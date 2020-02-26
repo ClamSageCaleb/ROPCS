@@ -34,21 +34,24 @@ ks = ['Press the Attack', 'Lethal Tempo', 'Fleet Footwork', 'Conqueror', 'Electr
 # Reading the files to populate lists champs and items
 with open(txt) as f:
     for line in f:
+        # Splits the txt file by the space character and then puts champs in the champs list and the
+        # roles into the roles list.
         s = line.strip().split(' ')
         champs.append(s[0])
         roles.append(s[1])
+# Zips roles and champs into a dictionary. Champion name is the key and the role is the value
 champSelect = dict(zip(champs, roles))
 
+# Reads items from the items.txt and adds it to items list.
 with open(itemsTxt) as f:
     for line in f:
         items.append(line)
-
 
 # Replaces the basic !help feature, responds with formatted bot commands and usage
 @client.event
 async def on_message(ctx):
     """
-    :param message: Sent in by the user. Executed by !help
+    :param ctx: Sent in by the user. Executed by !help
     :return: Formatted command list
     """
     if ctx.author == client.user:
@@ -125,8 +128,13 @@ async def killme(ctx):
         champs) + "\n Your Role is: " + random.choice(roles) + "\n Your keystone is: " + random.choice(
         ks) + "\n Your two items are: \n" + random.choice(items) + random.choice(items))
 
+# options Lists all of the potential champions and roles
 @client.command(aliases=['opt'], pass_context=True)
 async def options(ctx):
+    """
+    :param ctx: Takes the user's message in order to extract the author
+    :return: ALL Champs and Roles
+    """
     midList = []
     topList = []
     botList = []
@@ -171,8 +179,13 @@ async def options(ctx):
     msg.set_footer(text="Developed by Clam")
     await ctx.channel.send(embed=msg)
 
+# Lists all Mid Champs 
 @client.command()
 async def mid(ctx):
+    """
+    :param ctx: Takes the user's message in order to extract the author
+    :return: Returns all Mid Champs
+    """
     midList = []
     for key in champSelect:
         if champSelect[key] == 'Mid':
@@ -184,8 +197,13 @@ async def mid(ctx):
     msg.set_footer(text="Developed by Clam")
     await ctx.channel.send(embed=msg)
 
+# Lists all Top Champs
 @client.command()
 async def top(ctx):
+    """
+    :param ctx: Takes the user's message in order to extract the author
+    :return: Returns all Top champs
+    """
     topList = []
     for key in champSelect:
         if champSelect[key] == 'Top':
@@ -197,8 +215,13 @@ async def top(ctx):
     msg.set_footer(text="Developed by Clam")
     await ctx.channel.send(embed=msg)
 
+# Lists all Support Champs
 @client.command()
 async def supp(ctx):
+    """
+    :param ctx: Takes the user's message in order to extract the author
+    :return: Returns all support champs
+    """
     suppList = []
     for key in champSelect:
         if champSelect[key] == 'Support':
@@ -210,8 +233,13 @@ async def supp(ctx):
     msg.set_footer(text="Developed by Clam")
     await ctx.channel.send(embed=msg)
 
+# Lists all ADC champs
 @client.command()
 async def adc(ctx):
+    """
+    :param ctx: Takes the user's message in order to extract the author
+    :return: Returns all ADC champs
+    """
     botList = []
     for key in champSelect:
         if champSelect[key] == 'ADC':
@@ -223,8 +251,13 @@ async def adc(ctx):
     msg.set_footer(text="Developed by Clam")
     await ctx.channel.send(embed=msg)
 
+# Lists all jungle champs
 @client.command()
 async def jg(ctx):
+    """
+    :param ctx: Takes the user's message in order to extract the author
+    :return: Returns all Jungle champs
+    """
     jgList = []
     for key in champSelect:
         if champSelect[key] == 'Jungle':
@@ -236,16 +269,27 @@ async def jg(ctx):
     msg.set_footer(text="Developed by Clam")
     await ctx.channel.send(embed=msg)
 
+# Takes the user arugement of champName and creates a url for OP.GG based on champion
 @client.command(aliases=['st'], pass_context=True)
 async def stat(ctx, champName):
+    """
+    :param ctx: Takes the user's message in order to extract the author
+    :param champName: Used to create URL for OP.GG
+    :return: Returns the link to OP.GG for given champion
+    """
     link = "https://op.gg/champion/" + champName
     await ctx.send("Here's the stats! \n" + link)
-   
+
+# Takes the user argument of name and creates a url for OP.GG based on player
 @client.command(aliases=['pl'], pass_context=True)
 async def summoner(ctx, name):
+    """
+    :param ctx: Takes the user's message in order to extract the author
+    :param name: Used to create URL for OP.GG
+    :return: Returns the link to OP.GG for given player
+    """
     link = "https://op.gg/summoner/userName=" + name
     await ctx.send("Here's the stats! \n" + link)
-
 
 @client.command()
 async def ggez(ctx, name):
