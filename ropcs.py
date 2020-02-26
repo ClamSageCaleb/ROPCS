@@ -295,7 +295,7 @@ async def stat(ctx, champName):
     link = "https://op.gg/champion/" + champName
     champName = champName.title()
     msg = discord.Embed(title='__**' + champName +  ' Build**__', description="", color=0x0000ff, url=link)
-    msg.add_field(name=champName + " build", value= "This will increase win chance by 100%", inline=False)
+    msg.add_field(name=champName + " Build", value= "This will increase win chance by 100%", inline=False)
     msg.set_thumbnail(url="https://opgg-static.akamaized.net/images/lol/champion/" + champName + "?image=q_auto,w_140&v=1581511032")
     msg.set_footer(text="Developed by Clam")
     await ctx.channel.send(embed=msg)
@@ -310,7 +310,7 @@ async def summoner(ctx, name):
     """
     link = "https://op.gg/summoner/userName=" + name
     msg = discord.Embed(title='__**' + name +  ' Stats**__', description="", color=0x0000ff, url=link)
-    msg.add_field(name=name + " stats", value= "Flame their Win/Rate", inline=False)
+    msg.add_field(name=name + " Stats", value= "Flame their Win/Rate", inline=False)
     msg.set_footer(text="Developed by Clam")
     await ctx.channel.send(embed=msg)
 
