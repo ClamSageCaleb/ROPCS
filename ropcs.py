@@ -56,47 +56,25 @@ async def on_message(ctx):
 
     if ctx.content.startswith('!help'):
         msg = discord.Embed(title='__**Scrub Bot Commands**__', description="", color=0x0000ff)
-        msg.add_field(name="Eight Ball", value="Answers a yes/no question. \n Usage: !8ball [question]",
-                      inline=False)
-        msg.add_field(name="Square", value="Squares a number. \n Usage: !square [number]", inline=False)
         msg.add_field(name="Random Champ", value="Selects a random LoL Champion. \n Usage: !rc", inline=False)
+        msg.add_field(name="Stats", value="Get the OP.GG stats of a champion. \n Usage: !st [champ name]", inline=False)
+        msg.add_field(name="Summoner", value="Get the OP.GG stats of a player. \n Usage: !pl [player]", inline=False)
+        msg.add_field(name="Options", value="List ALL Champions. \n Usage: !opt", inline=False)
+        msg.add_field(name="Top", value="List ALL TOP Champions. \n Usage: !top", inline=False)
+        msg.add_field(name="Mid", value="List ALL MID Champions. \n Usage: !mid", inline=False)
+        msg.add_field(name="ADC", value="List ALL ADC Champions. \n Usage: !adc", inline=False)
+        msg.add_field(name="Support", value="List ALL SUPPORT Champions. \n Usage: !supp", inline=False)
+        msg.add_field(name="Jungle", value="List ALL JUNLGE Champions. \n Usage: !jg", inline=False)
         msg.add_field(name="Random Role", value="Selects a random LoL Role. \n Usage: !rr", inline=False)
         msg.add_field(name="Combo Role/Champ", value="Selects a random LoL Role and Champion. \n Usage: !rac",
                       inline=False)
         msg.add_field(name="Kill me", value="Selects a random LoL Champ, Role, Keystone, and two items. \n Usage: !km",
                       inline=False)
         msg.add_field(name="GG EZ", value="Just use it \n Usage: !ggez [user]", inline=False)
-        msg.set_thumbnail(url="https://themerkle.com/wp-content/uploads/2017/05/kingdice-pr.jpg")
+        msg.set_thumbnail(url="http://scrubhubkc.com/wp-content/uploads/2014/05/logo_large.png")
         msg.set_footer(text="Developed by Clam")
         await ctx.channel.send(embed=msg)
     await client.process_commands(ctx)
-
-
-@client.command(name='8ball', aliases=['eight_ball', 'eightball', '8-ball'], pass_context=True)
-async def eight_ball(ctx):
-    """
-    :param context: The question the user is wanting to ask
-    :return: Answer to the question
-    """
-    possible_responses = [
-        'That is a resounding no',
-        'It is not looking likely',
-        'Too hard to tell',
-        'It is quite possible',
-        'Definitely',
-    ]
-    await ctx.send(random.choice(possible_responses) + ", " + ctx.message.author.mention)
-
-
-@client.command()
-async def square(ctx, number):
-    """
-    :param number: The number the user is wanting to square
-    :return: Squared Number
-    """
-    squared_value = int(number) * int(number)
-    await ctx.send(str(number) + " squared is " + str(squared_value))
-
 
 @client.event
 async def on_ready():
@@ -189,9 +167,84 @@ async def options(ctx):
     msg.add_field(name="Mid", value= midStr, inline=False)
     msg.add_field(name="ADC", value= botStr, inline=False)
     msg.add_field(name="Support", value=suppStr, inline=False)
-    msg.set_thumbnail(url="https://themerkle.com/wp-content/uploads/2017/05/kingdice-pr.jpg")
+    msg.set_thumbnail(url="https://dl2.macupdate.com/images/icons256/47210.png?d=1362775965")
     msg.set_footer(text="Developed by Clam")
     await ctx.channel.send(embed=msg)
+
+@client.command()
+async def mid(ctx):
+    midList = []
+    for key in champSelect:
+        if champSelect[key] == 'Mid':
+            midList.append(key)
+    midStr = ', '.join(midList)
+    msg = discord.Embed(title='__**Mid Lane**__', description="", color=0x0000ff)
+    msg.add_field(name="Champions", value= midStr, inline=False)
+    msg.set_thumbnail(url="https://vignette.wikia.nocookie.net/leagueoflegends/images/9/98/Middle_icon.png/revision/latest?cb=20181117143644")
+    msg.set_footer(text="Developed by Clam")
+    await ctx.channel.send(embed=msg)
+
+@client.command()
+async def top(ctx):
+    topList = []
+    for key in champSelect:
+        if champSelect[key] == 'Top':
+            topList.append(key)
+    topStr = ', '.join(topList)
+    msg = discord.Embed(title='__**Top Lane**__', description="", color=0x0000ff)
+    msg.add_field(name="Champions", value= topStr, inline=False)
+    msg.set_thumbnail(url="https://vignette.wikia.nocookie.net/leagueoflegends/images/e/ef/Top_icon.png/revision/latest?cb=20181117143602")
+    msg.set_footer(text="Developed by Clam")
+    await ctx.channel.send(embed=msg)
+
+@client.command()
+async def supp(ctx):
+    suppList = []
+    for key in champSelect:
+        if champSelect[key] == 'Support':
+            suppList.append(key)
+    suppStr = ', '.join(suppList)
+    msg = discord.Embed(title='__**Support**__', description="", color=0x0000ff)
+    msg.add_field(name="Champions", value= suppStr, inline=False)
+    msg.set_thumbnail(url="https://vignette.wikia.nocookie.net/leagueoflegends/images/e/e0/Support_icon.png/revision/latest?cb=20181117143601")
+    msg.set_footer(text="Developed by Clam")
+    await ctx.channel.send(embed=msg)
+
+@client.command()
+async def adc(ctx):
+    botList = []
+    for key in champSelect:
+        if champSelect[key] == 'ADC':
+            botList.append(key)
+    botStr = ', '.join(botList)
+    msg = discord.Embed(title='__**ADC**__', description="", color=0x0000ff)
+    msg.add_field(name="Champions", value= botStr, inline=False)
+    msg.set_thumbnail(url="https://vignette.wikia.nocookie.net/leagueoflegends/images/9/97/Bottom_icon.png/revision/latest?cb=20181117143632")
+    msg.set_footer(text="Developed by Clam")
+    await ctx.channel.send(embed=msg)
+
+@client.command()
+async def jg(ctx):
+    jgList = []
+    for key in champSelect:
+        if champSelect[key] == 'Jungle':
+            jgList.append(key)
+    jgStr = ', '.join(jgList)
+    msg = discord.Embed(title='__**Support**__', description="", color=0x0000ff)
+    msg.add_field(name="Champions", value= jgStr, inline=False)
+    msg.set_thumbnail(url="https://vignette.wikia.nocookie.net/leagueoflegends/images/0/05/Smite.png/revision/latest?cb=20180514003641")
+    msg.set_footer(text="Developed by Clam")
+    await ctx.channel.send(embed=msg)
+
+@client.command(aliases=['st'], pass_context=True)
+async def stat(ctx, champName):
+    link = "https://op.gg/champion/" + champName
+    await ctx.send("Here's the stats! \n" + link)
+   
+@client.command(aliases=['pl'], pass_context=True)
+async def summoner(ctx, name):
+    link = "https://op.gg/summoner/userName=" + name
+    await ctx.send("Here's the stats! \n" + link)
 
 
 @client.command()

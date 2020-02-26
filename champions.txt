@@ -144,3 +144,6 @@ Ziggs Mid
 Zilean Support
 Zoe Mid
 Zyra Support
+Sett Top
+Senna Support
+Aphelios ADC
