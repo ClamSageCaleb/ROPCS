@@ -140,9 +140,8 @@ async def killme(ctx):
     # TODO: Potentially add 6 random items, also add an if statement where if the role is jungle at least one item
     #  will be a jungle item.
     ranChamp = random.choice(champs)
-    link = "https://op.gg/champion/" + ranChamp
     champName = ranChamp.title()
-    msg = discord.Embed(title='__**' + champName +  '**__', description="", color=0x0000ff, url=link)
+    msg = discord.Embed(title='__**' + champName +  '**__', description="", color=0x0000ff)
     msg.add_field(name="Role:", value= random.choice(roles), inline=False)
     msg.add_field(name="Keystone:", value= random.choice(ks), inline=False)
     msg.add_field(name="Two required items (For Entire Game):", value= random.choice(items) + "\n" + random.choice(items), inline=False)
