@@ -7,7 +7,6 @@ Ancient Coin
 Arcane Sweeper
 Arcane Sweeper
 Archangel's Staff
-Archangel's Staff (Quick Charge)
 Ardent Censer
 Athene's Unholy Grail
 Atma's Reckoning
@@ -83,14 +82,7 @@ Ghost Poro
 Giant's Belt
 Glacial Shroud
 Golden Transcendence
-Golden Transcendence (Disabled)
-Gravity Boots
-Greater Stealth Totem (Trinket)
-Greater Vision Totem (Trinket)
 Guardian Angel
-Guardian's Hammer
-Guardian's Horn
-Guardian's Orb
 Guinsoo's Rageblade
 Haunting Guise
 Health Potion
@@ -123,7 +115,6 @@ Lost Chapter
 Luden's Echo
 Luden's Pulse
 Manamune
-Manamune (Quick Charge)
 Maw of Malmortius
 Mejai's Soulstealer
 Mercurial Scimitar
@@ -139,9 +130,7 @@ Muramana
 Nashor's Tooth
 Needlessly Large Rod
 Negatron Cloak
-Nexus Siege: Siege Weapon Slot
 Ninja Tabi
-Nomad's Medallion
 Null-Magic Mantle
 Oblivion Orb
 Ohmwrecker

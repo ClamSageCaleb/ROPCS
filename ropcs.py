@@ -139,9 +139,16 @@ async def killme(ctx):
     """
     # TODO: Potentially add 6 random items, also add an if statement where if the role is jungle at least one item
     #  will be a jungle item.
-    await ctx.send("{0.mention}, \n Your Champ is: ".format(ctx.message.author) + random.choice(
-        champs) + "\n Your Role is: " + random.choice(roles) + "\n Your keystone is: " + random.choice(
-        ks) + "\n Your two items are: \n" + random.choice(items) + random.choice(items))
+    ranChamp = random.choice(champs)
+    link = "https://op.gg/champion/" + ranChamp
+    champName = ranChamp.title()
+    msg = discord.Embed(title='__**' + champName +  '**__', description="", color=0x0000ff, url=link)
+    msg.add_field(name="Role:", value= random.choice(roles), inline=False)
+    msg.add_field(name="Keystone:", value= random.choice(ks), inline=False)
+    msg.add_field(name="Two required items (For Entire Game):", value= random.choice(items) + "\n" + random.choice(items), inline=False)
+    msg.set_thumbnail(url="https://opgg-static.akamaized.net/images/lol/champion/" + champName + "?image=q_auto,w_140&v=1581511032")
+    msg.set_footer(text="Developed by Clam")
+    await ctx.channel.send(embed=msg)
 
 # options Lists all of the potential champions and roles
 @client.command(aliases=['opt'], pass_context=True)
