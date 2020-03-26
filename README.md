@@ -1,6 +1,6 @@
 <h1 align="center">
   <br>
-    <img src="https://github.com/ClamSageCaleb/ROPCS/blob/master/icon.svg" alt="Character Selector" width="200">
+    <img src="http://scrubhubkc.com/wp-content/uploads/2014/05/logo_large.png" width="200">
   <br>
     Random CHAMP/ROLE Selector
   <br>
