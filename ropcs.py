@@ -327,8 +327,8 @@ async def vote(ctx, *args):
     msg = discord.Embed(title='**' + question + '**', description="", color=0x0000ff)
     msg.add_field(name='Place your Votes!', value="✅ YES \n\n ❌ NO", inline=True)
     r = await ctx.channel.send(embed=msg)
-    await Client.add_reaction(r, "✅")
-    await discord.add_reaction(r, "❌")
+    await bot.add_reaction(r, "✅")
+    await bot.add_reaction(r, "❌")
 
 @client.command()
 async def ggez(ctx, name):
