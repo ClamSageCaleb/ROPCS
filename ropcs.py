@@ -320,7 +320,7 @@ async def summoner(ctx, name):
     msg.set_footer(text="Developed by Clam")
     await ctx.channel.send(embed=msg)
 
-@client.command(aliases=['v'], pass_context=True):
+@client.command(aliases=['v'], pass_context=True)
 async def vote(ctx, *args):
     question = '{}'.format(' '.join(args))
     await client.delete_message(ctx.message)
