@@ -74,6 +74,7 @@ async def on_message(ctx):
         msg.add_field(name="Kill me", value="Selects a random LoL Champ, Role, Keystone, and two items. \n Usage: !km",
                       inline=False)
         msg.add_field(name="GG EZ", value="Just use it \n Usage: !ggez [user]", inline=False)
+        msg.add_field(name="Vote", value="Use it to cast votes. \n Usage: !v [topic]")
         msg.add_field(name="Note", value="Development Information. \n Usage: !info")
         msg.set_thumbnail(url="http://scrubhubkc.com/wp-content/uploads/2014/05/logo_large.png")
         msg.set_footer(text="Developed by Clam")
