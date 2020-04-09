@@ -320,6 +320,13 @@ async def summoner(ctx, name):
     msg.set_footer(text="Developed by Clam")
     await ctx.channel.send(embed=msg)
 
+@client.command(aliases=['v'], pass_context=True):
+async def vote(ctx, *args):
+    question = '{}'.format(' '.join(args))
+    await client.delete_message(ctx.message)
+    msg = discord.Embed(title='__**Place your Votes!**__', description="", color=0x0000ff)
+    msg.add_field(name=question, value= "<✅ for yes! \n ❌ for no!", inline=False)
+
 @client.command()
 async def ggez(ctx, name):
     msg = '''░░░░░░░░░░░░░░░░░░░░░░░░░
