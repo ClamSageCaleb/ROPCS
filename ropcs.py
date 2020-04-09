@@ -326,6 +326,7 @@ async def vote(ctx, *args):
     await ctx.message.delete()
     msg = discord.Embed(title='__**Place your Votes!**__', description="", color=0x0000ff)
     msg.add_field(name=question, value= "<✅ for yes! \n ❌ for no!", inline=False)
+    await ctx.channel.send(embed=msg)
 
 @client.command()
 async def ggez(ctx, name):
