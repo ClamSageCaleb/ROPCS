@@ -24,7 +24,7 @@
 
 ## Commands
 
-The default command prefix is "!". This can be changed in the config.
+The default command prefix is "!". This can be changed, change 'BOT_PREFIX' in the code.
 
 ## Examples 
 ```
