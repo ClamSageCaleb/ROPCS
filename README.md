@@ -8,8 +8,13 @@
 
 ## Key Features
 
-* Ranomdly pick your Champ or Role when you don't know what to play.
-* More to come!
+* Randomdly pick your Champ or Role when you don't know what to play.
+* Voting System.
+* Check for builds or player stats on OP.GG
+
+## Requirements
+
+* Python3
 
 ## Installation
 
