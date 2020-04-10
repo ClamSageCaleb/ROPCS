@@ -1,7 +1,4 @@
 <h1 align="center">
-  <br>
-    <img src="http://scrubhubkc.com/wp-content/uploads/2014/05/logo_large.png" width="200">
-  <br>
     Random CHAMP/ROLE Selector
   <br>
 </h1>
