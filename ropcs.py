@@ -1,6 +1,6 @@
 __author__ = "ClamSageCaleb"
 __copyright__ = "Copyright 2019, MIT License"
-__credits__ = "Caleb Smith"
+__credits__ = "ClamSageCaleb"
 __license__ = "MIT"
 __version__ = "0.0.2"
 __maintainer__ = "ClamSageCaleb"
