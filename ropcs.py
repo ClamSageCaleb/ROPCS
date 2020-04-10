@@ -322,12 +322,18 @@ async def summoner(ctx, name):
     msg.set_footer(text="Developed by Clam")
     await ctx.channel.send(embed=msg)
 
+# Creates a poll with a user-generated question
 @client.command(aliases=['v'], pass_context=True)
 async def vote(ctx, *args):
+    """
+    :param ctx: Takes the user's message in order to extract the author
+    :param *args: Takes the users arguements after the !v command in chat
+    :return: A poll with pre applied reactions
+    """
     question = '{}'.format(' '.join(args))
     await ctx.message.delete()
-    msg = discord.Embed(title='**' + question + '**', description="", color=0x0000ff)
-    msg.add_field(name='Place your Votes!', value="✅ YES \n\n ❌ NO", inline=True)
+    msg = discord.Embed(title='**' + ctx.author + "asked: " + question + '**', description="", color=0x0000ff)
+    msg.add_field(name='Place your votes!', value="✅ YES \n\n ❌ NO", inline=True)
     r = await ctx.channel.send(embed=msg)
     await discord.Message.add_reaction(r, "✅")
     await discord.Message.add_reaction(r, "❌")
