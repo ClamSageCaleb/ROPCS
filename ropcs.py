@@ -14,7 +14,8 @@ from discord.ext import commands
 
 # Bot prefix and Discord Bot token
 BOT_PREFIX = ("!")
-TOKEN = "NTg4NDM0NjAzNjM1OTAwNDI2.XZZlhw.skHJPE_5yM6pkuiuQFq9eryBCpM"
+# Insert your own Token here
+TOKEN = " "
 game = discord.Game("with the API")
 
 # Creates the Bot with name 'client'
