@@ -1,10 +1,9 @@
-__author__ = "Caleb Smith"
+__author__ = "ClamSageCaleb"
 __copyright__ = "Copyright 2019, MIT License"
 __credits__ = "Caleb Smith"
 __license__ = "MIT"
 __version__ = "0.0.2"
-__maintainer__ = "Caleb Smith"
-__email__ = "caleb.benjamin9799@gmail.com"
+__maintainer__ = "ClamSageCaleb"
 __status__ = "Production"
 
 import random
