@@ -25,12 +25,14 @@
 ## Commands
 
 The default command prefix is "!". This can be changed in the config.
+
+## Examples 
 ```
-Random Champ:Randomly selects a League of Legends champion. Usage: !rc
+Random Champ: Randomly selects a League of Legends champion. Usage: !rc
 
-Random Role: Randomly selects a League of Legends role. Usage: !rr
+Vote: Creates a poll for users to vote on. Usage: !v This is an exmaple!
 
-Random Combo: Randomly selects a League of Legends champion AND Role. Usage: !rac
+Help: Displays all commands in chat. Usage: !help
 ```
 
 ---
