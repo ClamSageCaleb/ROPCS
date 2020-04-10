@@ -333,7 +333,7 @@ async def vote(ctx, *args):
     question = '{}'.format(' '.join(args))
     await ctx.message.delete()
     author = ctx.message.author
-    msg = discord.Embed(title='**' + author + "asked: " + question + '**', description="", color=0x0000ff)
+    msg = discord.Embed(title='** {} asked: ' + question + '**'.format(author), description="", color=0x0000ff)
     msg.add_field(name='Place your votes!', value="✅ YES \n\n ❌ NO", inline=True)
     r = await ctx.channel.send(embed=msg)
     await discord.Message.add_reaction(r, "✅")
