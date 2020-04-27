@@ -344,6 +344,7 @@ async def report(ctx, *args):
     report = '{}'.format(' '.join(args))
     await ctx.message.delete()
     author = ctx.message.author
+    # Place the server admin userID below in the get_user()
     admin = client.get_user()
     await admin.send("{} reported an issue. \n The Issue: \n {}".format(author, report))
     await ctx.author.send("Your report has been recieved.")
