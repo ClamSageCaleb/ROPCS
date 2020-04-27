@@ -15,7 +15,7 @@ from discord.ext import commands
 BOT_PREFIX = ("!")
 
 # Insert your own Token here
-TOKEN = " "
+TOKEN = ""
 game = discord.Game("with the API")
 
 # Creates the Bot with name 'client'
@@ -340,14 +340,12 @@ async def vote(ctx, *args):
     await discord.Message.add_reaction(r, "❌")
 
 @client.command(aliases=['r'], pass_context=True)
-async def report(ctx, *args)
+async def report(ctx, *args):
     report = '{}'.format(' '.join(args))
     await ctx.message.delete()
     author = ctx.message.author
-    admin = client.get_user(94568460805214208)
-    msg = discord.Embed(title='**{} reported an issue.**'.format(author), description="", color=0x0000ff)
-    msg.add_field(name='Issue: ', value= '{}'.format(report), inline=False)
-    await user.send(msg)
+    admin = client.get_user()
+    await admin.send("{} reported an issue. \n The Issue: \n {}".format(author, report))
     await ctx.author.send("Your report has been recieved.")
 
 @client.command()
