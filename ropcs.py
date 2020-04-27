@@ -339,6 +339,17 @@ async def vote(ctx, *args):
     await discord.Message.add_reaction(r, "✅")
     await discord.Message.add_reaction(r, "❌")
 
+@client.command(aliases=['r'], pass_context=True)
+async def report(ctx, *args)
+    report = '{}'.format(' '.join(args))
+    await ctx.message.delete()
+    author = ctx.message.author
+    admin = client.get_user(94568460805214208)
+    msg = discord.Embed(title='**{} reported an issue.**'.format(author), description="", color=0x0000ff)
+    msg.add_field(name='Issue: ', value= '{}'.format(report), inline=False)
+    await user.send(msg)
+    await ctx.author.send("Your report has been recieved.")
+
 @client.command()
 async def ggez(ctx, name):
     msg = '''░░░░░░░░░░░░░░░░░░░░░░░░░
