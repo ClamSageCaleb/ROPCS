@@ -344,7 +344,8 @@ async def report(ctx, *args):
     report = '{}'.format(' '.join(args))
     await ctx.message.delete()
     author = ctx.message.author
-    tickets = get_channel(704461052087238656)
+    # Place the channel ID in the tickets variable
+    tickets = get_channel(# ID HERE)
     msg = discord.Embed(title='**{} reported: {}**'.format(author, report), description="", color=0x0000ff)
     msg.add_field(name='Click ✅ if report is handled.', value="✅", inline=True)
     r = await tickets.send(embed=msg)
