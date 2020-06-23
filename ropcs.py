@@ -343,11 +343,11 @@ async def vote(ctx, *args):
 async def report(ctx, *args):
     report = '{}'.format(' '.join(args))
     await ctx.message.delete()
-    author = ctx.message.author
+    author = ctx.message.author.display_name
     # Place the channel ID in the tickets variable
-    tickets = get_channel(# ID HERE)
+    tickets = client.get_channel(# ID HERE)
     msg = discord.Embed(title='**{} reported: {}**'.format(author, report), description="", color=0x0000ff)
-    msg.add_field(name='Click ✅ if report is handled.', value="✅", inline=True)
+    msg.add_field(name='Admins:', value = "Click ✅ if report is handled.", inline=True)
     r = await tickets.send(embed=msg)
     await discord.Message.add_reaction(r, "✅")
     await ctx.author.send("Your report has been recieved.")
