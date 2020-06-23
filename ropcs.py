@@ -344,9 +344,11 @@ async def report(ctx, *args):
     report = '{}'.format(' '.join(args))
     await ctx.message.delete()
     author = ctx.message.author
-    # Place the server admin userID below in the get_user()
-    admin = client.get_user()
-    await admin.send("{} reported an issue. \n The Issue: \n {}".format(author, report))
+    tickets = get_channel(704461052087238656)
+    msg = discord.Embed(title='**{} reported: {}**'.format(author, report), description="", color=0x0000ff)
+    msg.add_field(name='Click ✅ if report is handled.', value="✅", inline=True)
+    r = await tickets.send(embed=msg)
+    await discord.Message.add_reaction(r, "✅")
     await ctx.author.send("Your report has been recieved.")
 
 @client.command()
