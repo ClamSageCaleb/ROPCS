@@ -1,4 +1,5 @@
 <h1 align="center">
+    || OUTDATED ||<br>
     Random CHAMP/ROLE Selector
   <br>
 </h1>
